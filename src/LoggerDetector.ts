@@ -1,9 +1,9 @@
-interface LoggerDetectorInterface {
+export interface LoggerDetectorInterface {
     loggingsInformation: { [ip: string]: LogInformation };
     parseLine(logLine: string): string; 
 }
 
-class LoggerDetector implements LoggerDetectorInterface 
+export class LoggerDetector implements LoggerDetectorInterface 
 {
     loggingsInformation: { [ip: string]: LogInformation; } = {};
 
