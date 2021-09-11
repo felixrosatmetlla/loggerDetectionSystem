@@ -1,0 +1,1 @@
+Simple Logger Detector, that detects through logs when there has been consecutive suspicious logs in 5 minutes time
