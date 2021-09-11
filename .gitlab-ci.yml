@@ -1,0 +1,16 @@
+image: node:latest
+
+stages:
+  - build
+  - test
+
+cache:
+  paths:
+    - node_modules/
+
+unit-test-job:   # This job runs in the test stage.
+  stage: test    # It only starts when the job in the build stage completes successfully.
+  script:
+    - npm install
+    - npm i -D jasmine nyc ts-node typescriptnpm i -D @types/jasmine
+    - npm test
